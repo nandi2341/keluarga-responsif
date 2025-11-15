@@ -1,0 +1,152 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+.judul-utama {
+  text-align: center;
+}
+
+/* STYLES DARI LATIHAN PDF 
+  (Container Flexbox & Kartu Anggota)
+*/
+.keluarga-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.anggota {
+  /* Style KTP Biru */
+  background-color: #e0f0ff;
+  border: 3px solid #0066cc;
+  color: #000;
+  border-radius: 15px;
+
+  /* Lebar 4 Kolom (Syarat PDF) */
+  width: 22%;
+
+  margin: 10px;
+  padding: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box; /* Sesuai PDF */
+
+  min-width: 340px;
+}
+
+/* Efek Hover (Syarat PDF) */
+.anggota:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.ktp-header {
+  text-align: center;
+  font-weight: bold;
+  font-size: 11px; /* Diubah dari 14px */
+  margin-bottom: 10px;
+  color: #000;
+}
+
+/* CSS BARU UNTUK LAYOUT FOTO DI KANAN
+*/
+.ktp-body {
+  display: flex;
+  justify-content: space-between;
+}
+
+.data-ktp {
+  width: 65%;
+  word-wrap: break-word;
+}
+
+/* === PERBAIKAN FOTO === */
+.foto-container {
+  width: 30%;
+  font-size: 7px; /* Diubah dari 10px */
+  text-align: center;
+  height: 130px;
+}
+
+.foto-container img {
+  width: 100%;
+  height: 100px;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+/* Merapikan paragraf data KTP */
+.data-ktp p {
+  margin-top: 2px;
+  margin-bottom: 2px;
+  font-size: 8px; /* Diubah dari 11px */
+}
+
+/* === PERBAIKAN TITIK DUA === */
+.data-ktp p strong {
+  display: inline-block;
+  width: 80px;
+  vertical-align: top;
+}
+.alamat-detail {
+  margin-left: 0;
+}
+
+/* Ganti dengan text-indent pada <strong> */
+.alamat-detail strong {
+  /* Ini akan menggeser teks di dalam box 120px */
+  text-indent: 20px;
+}
+/* === ATURAN .alamat-detail DIHAPUS === */
+/* Tidak ada lagi CSS untuk .alamat-detail */
+
+/* MEDIA QUERIES DARI LATIHAN PDF 
+  (Untuk Tablet & HP)
+*/
+
+@media (max-width: 1400px) {
+  .anggota {
+    width: 30%;
+  }
+}
+
+@media (max-width: 768px) {
+  .anggota {
+    width: 45%;
+    min-width: 0;
+  }
+
+  .ktp-body {
+    flex-direction: column;
+  }
+  .data-ktp {
+    width: 100%;
+  }
+  .foto-container {
+    width: 100px;
+    margin: 10px auto 0 auto;
+    height: auto;
+  }
+  .foto-container img {
+    height: 100px;
+  }
+  .data-ktp p {
+    font-size: 9px; /* Diubah dari 12px */
+  }
+
+  /* Matikan perataan di tablet */
+  .data-ktp p strong {
+    display: inline;
+    width: auto;
+  }
+
+  /* Aturan untuk .alamat-detail di tablet juga dihapus */
+}
+
+@media (max-width: 480px) {
+  .anggota {
+    width: 90%;
+  }
+}
