@@ -22,17 +22,23 @@ body {
   color: #000;
   border-radius: 15px;
   width: 22%;
+  min-width: 340px;
   margin: 10px;
   padding: 15px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   box-sizing: border-box;
-  min-width: 340px;
 }
 
 .anggota:hover {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
-
+.foto-container:hover {
+  transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  -o-transform: scale(1.05);
+}
 .ktp-header {
   text-align: center;
   font-weight: bold;
@@ -76,6 +82,11 @@ body {
   display: inline-block;
   width: 75px;
   vertical-align: top;
+}
+.data-ktp p.nik {
+  font-family: "OCR A Std", monospace;
+  font-size: 12px;
+  padding-bottom: 5px;
 }
 
 .alamat-detail {
